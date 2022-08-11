@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Doc</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- 样式表CSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <!-- 文件夹样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />
+
+  <!-- 箭头样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+
+  <!-- 引入LaTeX公式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+
+  <!--- 网站图标 -->
+  <!-- <link rel="shortcut icon" href="语雀.exe.png"> -->
+  <!-- <link rel="shortcut icon" href="https://clotliu.com/"> -->
+
+  <!-- 主体设置：任选其一，不选默认 -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css"> -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css"> -->
+
+</head>
+
+<body>
+  <div id="app"></div>
+  <div id="app">🏃‍🏃‍🏃‍💨加载中...</div>
+
+  <!-- 滚轮设置 -->
+  <style type="text/css">
+    .content {
+      overflow: auto;
+    }
+  </style>
+
+  <!-- 配置项 -->
+  <script>
+    window.$docsify = {
+      el: '#app',
+      name: 'NYH',
+      // 点击文档标题后跳转的链接地址
+      nameLink: '/',
+      // repo: 'https://blog.pyrroleach.com/index.php/archives/118/',//此处可以填写GitHub、Gitee链接
+
+      // 入口文件，默认为README.md
+      homepage: '',
+      // 在找不到指定页面时加载 _404.md
+      //notFoundPage: true
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      coverpage: true, //设置封面
+      onlyCover: true, // 封面和内容单独显示
+      // auto2top: true,// 跳转后自动到顶部
+      // loadNavbar: true, //设置导航栏，未成功
+      // loadSidebar: true, // 设置侧边栏
+      // subMaxLevel: 4,
+      // topMargin: 25, // default: 0// 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。
+      // themeColor: '#8c3fc8',//主体颜色
+
+      // disqus: 'shortname',//评论
+
+      // 小屏设备下合并导航栏到侧边栏
+      mergeNavbar: true,
+
+      //不知道
+      // alias: {
+      //   "/.*/_sidebar.md": "/_sidebar.md",
+      // },
+
+      //##################
+      //插件
+      //##################
+
+      // 搜索-########################
+      search: {
+        maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
+        paths: [],                      // or 'auto'，匹配文件路径
+        placeholder: '🔍 搜索',  // 搜索提示框文字， 支持本地化，例子在下面
+        // placeholder: {
+        //   '/zh-cn/': '搜索',
+        //   '/': 'Type to search'
+        // },
+        noData: 'No Results!',          // 找不到结果文字提示，支持本地化，例子在下面
+        // noData: {
+        //   '/zh-cn/': '找不到结果',
+        //   '/': 'No Results'
+        // },
+        depth: 6,                      // 搜索标题的最大程级, 1 - 6
+        namespace: "website-1",// 避免搜索索引冲突,同一域下的多个网站之间
+
+        // 分页导航-########################
+        pagination: {
+          previousText: '上一章节',
+          nextText: '下一章节',
+          crossChapter: true,
+          crossChapterText: true,
+        },
+
+        // 页面右侧toc-########################
+        toc: {
+          tocMaxLevel: 2,
+          target: "h2, h3, h4",
+        },
+        // toc: {
+        //   scope: '.markdown-section',
+        //   headings: 'h1, h2, h3, h4, h5, h6',
+        //   title: 'Table of Contents',
+        // },
+
+        // // 回到顶部
+        // scrollToTop: {
+        //   auto: true,
+        //   text: '回到顶部',
+        //   right: 12,
+        //   bottom: 52,
+        //   offset: 25
+        // },
+
+        // // 字数统计-########################
+        // count: {
+        //   countable: true,
+        //   position: 'top',
+        //   margin: '10px',
+        //   float: 'right',
+        //   fontsize: '.9em',
+        //   color: 'rgb(90,90,90)',
+        //   language: 'chinese',
+        //   localization: {
+        //     words: "",
+        //     minute: ""
+        //   },
+        //   isExpected: true
+        // },
+
+        //复制代码-########################
+        copyCode: {
+          buttonText: '复制',
+          errorText: 'Error',
+          successText: '已复制'
+        },
+
+        // //公告-########################
+        // topBanner: {
+        //   content: "这是一条公告[这是一条链接](https://blog.pyrroleach.com)",//公告内容，支持markdown语法的链接
+        //   backgroundColor: "#fff",//条幅背景色，不填默认为#deebff
+        //   textColor: "red",//公告文本颜色，不填默认为#091E42
+        //   linkColor: "blue"//链接颜色，不填默认为#091E42
+        // },
+
+        // //进度条-########################
+        // progress: {
+        //   position: "top",//默认上方
+        //   color: "var(--theme-color,#42b983)",//进度条颜色
+        //   height: "5px",//进度条高度
+        // },
+
+
+
+      }
+    };
+  </script>
+
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+
+  <!-- Emoji -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+  <!-- 引入搜索模块 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+  <!-- 代码复制到粘贴板 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script> -->
+
+  <!-- 分页导航 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+
+  <!-- 高亮引用插件 -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
+  <!-- LaTeX插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
+  <!-- 公告插件 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/index.js"></script> -->
+
+  <!-- 阅读进度条插件 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>V -->
+
+  <!-- 页面右侧 TOC -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.1.0/dist/docsify-plugin-toc.min.js"></script>
+  <!-- <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script> -->
+
+  <!-- 侧边栏目录折叠 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+  <!-- 多tab支持 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script> -->
+
+  <!-- 图片缩放 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+
+  <!-- 评论 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
+
+  <!-- 回到顶部功能 -->
+  <!-- <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script> -->
+
+</body>
+
+</html>

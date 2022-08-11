@@ -1,0 +1,396 @@
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.install-box {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #ffffff, #c8eeff);
+}
+
+.install-box-instlling {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    height: 98vh;
+    background-image: linear-gradient(to bottom right, #ffffff, #c8eeff);
+}
+
+.laoding-long {
+    width: 100%;
+    background-color: rgb(35, 138, 255);
+    height: 2vh;
+    animation: loading 10s ease-in-out forwards infinite;
+}
+
+@keyframes loading {
+
+    0% {
+        transform: translateX(-2160px);
+    }
+
+    25%{
+        transform: translateX(-1080px);
+    }
+
+    75% {
+        transform: translateX(-960px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+}
+
+.laoding-text {
+    display: grid;
+    width: 100%;
+    justify-items: right;
+}
+
+.laoding-text p {
+    margin-right: 20px;
+}
+
+.install {
+    margin-top: 10vh;
+    width: 65%;
+    display: grid;
+    grid-template-columns: 10fr 11fr;
+    justify-items: center;
+    align-items: center;
+    height: 75vh;
+    border: solid;
+    border-width: 0.1px;
+    border-color: snow;
+    box-shadow: 0 30px 45px rgba(196, 196, 196, 0.911);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.install-keyboard {
+    margin-top: 10vh;
+    width: 65%;
+    display: grid;
+    grid-template-columns: 10fr 11fr;
+    justify-items: center;
+    align-items: center;
+    height: 75vh;
+    border: solid;
+    border-width: 0.1px;
+    border-color: snow;
+    box-shadow: 0 30px 45px rgba(196, 196, 196, 0.911);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.install-input-name {
+    margin-top: 10vh;
+    width: 65%;
+    display: grid;
+    grid-template-columns: 10fr 11fr;
+    justify-items: center;
+    align-items: center;
+    height: 75vh;
+    border: solid;
+    border-width: 0.1px;
+    border-color: snow;
+    box-shadow: 0 30px 45px rgba(196, 196, 196, 0.911);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.install-installing {
+    margin-top: 10vh;
+    width: 65%;
+    display: grid;
+    grid-template-columns: 10fr 11fr;
+    justify-items: center;
+    align-items: center;
+    height: 75vh;
+    border: solid;
+    border-width: 0.1px;
+    border-color: snow;
+    box-shadow: 0 30px 45px rgba(196, 196, 196, 0.911);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.installing-title {
+    margin-top: 10vh;
+    width: 65%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 75vh;
+    border: solid;
+    border-width: 0.1px;
+    border-color: snow;
+    box-shadow: 0 30px 45px rgba(196, 196, 196, 0.911);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.install-box-left-img {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    animation: updown 3s ease-in-out forwards infinite;
+}
+
+.install-box-left-img-keyboard {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    animation: updown 3s ease-in-out forwards infinite;
+}
+
+.install-box-left-img img {
+    size: 120%;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+.install-box-left-img-keyboard img {
+    size: 120%;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+@keyframes updown {
+
+    0% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+
+}
+
+.install-box-right {
+    width: 100%;
+    display: grid;
+    justify-items: left;
+    height: 75vh;
+    align-items: center;
+}
+
+.install-box-right-text {
+    width: 100%;
+    display: grid;
+    justify-items: left;
+    height: 75vh;
+    align-items: center;
+}
+
+.right-box-title {
+    display: grid;
+    justify-items: left;
+    margin-top: 10px;
+    margin-bottom: -45px;
+}
+
+.right-box-title h1 {
+    font-weight: 500;
+    letter-spacing: 1px;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+.right-box-itmes {
+    height: 48vh;
+    width: 90%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: solid;
+    border-width: 1px;
+    border-color: snow;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(226, 226, 226, 0.911);
+}
+
+.install-box-language {
+    display: grid;
+    justify-items: left;
+    align-items: center;
+    width: 90%;
+    height: 95%;
+    border-radius: 8px;
+    transition: all 0.3s ease 0s;
+}
+
+.install-box-language:hover {
+    background-color: rgb(35, 138, 255);
+    border-radius: 8px;
+}
+
+.install-box-language h4 {
+    font-size: 23px;
+    color: rgb(68, 68, 68);
+    font-weight: 530;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    display: grid;
+    justify-items: left;
+    align-items: center;
+    width: 90%;
+    height: 95%;
+    margin-left: 30px;
+    transition: all 0.35s ease 0s;
+}
+
+.install-box-language h4:hover {
+    color: white;
+}
+
+.install-diqu-continue-button {
+    display: grid;
+    justify-items: right;
+    align-items: center;
+    width: 100%;
+    height: 38px;
+    margin-bottom: 15px;
+    margin-top: -15px;
+}
+
+.install-diqu-continue-button a {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 25%;
+    margin-right: 41px;
+    height: 38px;
+    text-decoration: none;
+}
+
+.install-diqu-continue-button-box {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(35, 138, 255);
+    height: 41px;
+    text-decoration: none;
+    transition: all 0.2s ease 0s;
+}
+
+.install-diqu-continue-button-box:hover {
+    background-color: rgba(35, 138, 255, 0.801);
+}
+
+.install-diqu-continue-button-box p {
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+}
+
+.right-box-text {
+    display: grid;
+    justify-items: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.right-box-text p {
+    margin-top: 10px;
+    color: rgb(121, 121, 121);
+}
+
+.computer-name-input {
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(177, 177, 177);
+    border-radius: 8px;
+    height: 50px;
+    width: 60%;
+    font-size: 22px;
+    font-weight: 530;
+}
+
+.installing-text {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.installing-text h1 {
+    animation: letter 3s ease-in-out forwards infinite;
+}
+
+@keyframes letter {
+
+    0% {
+        letter-spacing: 13px;
+    }
+
+    50% {
+        letter-spacing: 5px;
+    }
+
+    100% {
+        letter-spacing: 13px;
+    }
+
+}
+
+.blackground-text {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.blackground-text h1 {
+    font-size: 35px;
+    font-weight: 530;
+    color: white;
+    letter-spacing: 2px;
+    animation: text-color 3s ease-in-out forwards infinite;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+@keyframes text-color {
+
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: rgb(32, 110, 255);
+    }
+
+    100% {
+        color: white;
+    }
+
+}
+
+.install-box-language:focus {
+    background-color: rgb(32, 110, 255);
+}
+
+.install-box-language h4:focus {
+    background-color: rgb(32, 110, 255);
+}
+

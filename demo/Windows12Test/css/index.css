@@ -1,0 +1,77 @@
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.install-img {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    height: 85vh;
+    align-items: center;
+}
+
+.reset-windows-img {
+    display: grid;
+    justify-items: center;
+    height: 85vh;
+    align-items: center;
+    animation: scrolltoright 6s ease-in-out forwards;
+}
+
+@keyframes scrolltoright {
+
+    0% {
+        transform: translateX(-1080px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(1080px);
+    }
+
+}
+
+.welcome-windows-img {
+    display: grid;
+    justify-items: center;
+    height: 100vh;
+    align-items: center;
+    animation: scrolltoright-stop 6s ease-in-out forwards;
+}
+
+.welcome-windows-img img {
+    margin-bottom: -10vh;
+}
+
+.welcome-windows-img h3 {
+    font-size: 40px;
+    font-weight: 530;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(17, 120, 255);
+    margin-top: -15vh;
+    letter-spacing: 1px;
+}
+
+@keyframes scrolltoright-stop {
+
+    0% {
+        transform: translateX(-1650px);
+    }
+
+    20% {
+        transform: translateX(-1150px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+}
+

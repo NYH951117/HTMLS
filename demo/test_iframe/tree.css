@@ -1,0 +1,52 @@
+div{
+    color:#ff7b00;
+    
+    /*align="center"*/
+
+    
+}
+
+.text{
+    margin:10px;
+    height: 500px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: green;
+
+    background-color: #584f46;
+
+}
+.m_menu{
+    /*width: 100px;*/
+    /*height: 100px;*/
+    margin:10px;
+
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: red;
+
+    background-color: #584f46;
+
+
+}
+.menu_span{
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color:gray;
+
+    background-color: #a1662a;
+
+
+}
+
+p{
+
+    color:#4400ff;
+    font-size:25px;
+
+
+
+}

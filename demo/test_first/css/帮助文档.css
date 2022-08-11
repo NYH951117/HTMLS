@@ -1,0 +1,58 @@
+ header {
+     margin: 0px;
+     height: 70px;
+     /* border-radius: 5px; */
+     border-style: solid;
+     border-width: 5px;
+     border-color: green;
+     background-color: #7a6c65;
+ }
+ 
+ main {
+     margin: 0px;
+     height: 550px;
+     border-radius: 5px;
+     border-style: solid;
+     border-width: 5px;
+     border-color: rgb(128, 51, 0);
+     background-color: #e0b49e;
+ }
+ 
+ ul {
+     list-style-type: none;
+ }
+ 
+ nav,
+ article,
+ aside {
+     /* 共同的部分可以提出 */
+     float: left;
+     height: 100%;
+ }
+ 
+ nav {
+     /* margin: 0px; */
+     width: 200px;
+     background-color: #814c31;
+ }
+ 
+ article {
+     margin: 0 10px;
+     width: 1270px;
+     background-color: #696766;
+ }
+ /* aside {
+            width: 50px;
+            height: 100%;
+            background-color: #0b991e;
+        } */
+ 
+ footer {
+     /* height: 30px; */
+     border-radius: 5px;
+     border-style: solid;
+     border-width: 5px;
+     border-color: green;
+     background-color: #928f8d;
+     text-align: center;
+ }

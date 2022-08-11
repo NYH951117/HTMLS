@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多级菜单</title>
+    <style > 
+
+    </style>
+    
+    <link rel="stylesheet" href="tree.css">
+</head>
+<body >
+
+    <div id="text1" class="text">
+    <iframe src="https://www.csdn.net/" frameborder="0" height="100%" width="100%">
+    </iframe>
+    </div>
+    <div id="text2" class="text">
+    <iframe src="..\WORD\Sub 合并文件.htm" frameborder="0" height="100%" width="100%"><!-- 【..\】表示上级菜单，可以忽略 -->
+    </iframe>
+    </div>
+    <div id="text3" class="text">
+    <iframe src=".\idl.htm" frameborder="0" height="100%" width="100%">        <!-- 【.\】表示同级菜单，可以忽略 -->
+    </iframe>
+    </div>
+    <div id="text4" class="text">
+    <iframe src="C:\Users\ThinkPad\Desktop\HTML\WORD\Sub 合并文件.htm" frameborder="0" height="100%" width="100%">
+    </iframe>
+    </div>
+    <div id="main_menu" class="m_menu">
+        <div>
+        <span class="menu_span">一、首行菜单 </span>
+        <a href="#">裁剪</a>
+        <a href="#">重采样</a>
+        <a href="#">多视</a>
+        <a href="#">滤波</a>
+        <a href="#">去平地</a>
+        <a href="#">裁剪</a>
+    </div>
+    <div class="collapsed">
+        <span class="menu_span">二、首行菜单 </span>
+        <a href="#">裁剪</a>
+        <a href="#">重采样</a>
+        <a href="#">多视</a>
+        <a href="#">滤波</a>
+        <a href="#">去平地</a>
+        <a href="#">裁剪</a>
+    </div>
+    <div class="collapsed">
+        <span class="menu_span">三、首行菜单 </span>
+        <a href="#">裁剪2</a>
+        <a href="#">重采2样</a>
+        <a href="#">多视2</a>
+        <a href="#">滤波2</a>
+        <a href="#">去平地2</a>
+        <a href="#">裁剪2</a>
+    </div>
+    <li><a href="#">裁剪菜单</a>
+        <ul> <a href="#">裁剪</a></ul>
+        <ul> <a href="#">裁剪</a></ul>
+        <ul> <a href="#">裁剪</a></ul>
+        <ul> <a href="#">裁剪</a></ul>
+        <ul> <a href="#">裁剪</a></ul>
+        <ul> <a href="#">裁剪</a></ul>
+    </li>
+    <div class="collapsed">
+        <span class="menu_span">四、首行菜单 </span>
+        <a href="#">裁剪</a>
+        <a href="#">重采样</a>
+        <a href="#">多视</a>
+        <a href="#">滤波</a>
+        <a href="#">去平地</a>
+        <a href="#">裁剪</a>
+    </div>
+</div>
+<!-- 
+    【&nbsp;】表示空格，输入多个空格需要用到
+    【&gt】大于号
+    【&lt】小于号
+    【&copy】版权号©
+
+-->
+    <p>知识&nbsp;<b>就是</b>&nbsp;力量&copy</p>
+
+</body>
+</html>
