@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NYH-DOC</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- Logo-->
+  <link rel="icon" href="_media/logo-48.png">
+
+  <!-- 主题样式 -->
+  <link rel="stylesheet" href="./css/lifeup_simple.css">
+  <link rel="stylesheet" href="./css/lifeup_vue_override.css">
+
+  <!-- 右侧目录 -->
+  <link rel="stylesheet" href="./css/toc_1.3.1.css">
+
+  <!-- 编辑按钮 -->
+  <script src="./js/edit_button_header.js"></script>
+
+
+  <style>
+    /* 固定导航栏 */
+    .app-nav {
+      position: fixed;
+      margin: -22px 85px 0px 0;
+      background-color: #ffffff;
+      font-weight: bolder;
+      color: #007bff
+    }
+
+    /* 固定大纲按钮：sidebar-toggle */
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <div id="app">🏃‍🏃‍🏃‍💨加载中...</div>
+
+  <!-- 配置项 -->
+  <script>
+    window.$docsify = {
+      name: 'NYH',
+      repo: 'https://github.com/Ayagikei/LifeUp-Wiki',
+      loadNavbar: true,
+      mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
+      subMaxLevel: 2,
+      coverpage: false,
+      loadSidebar: true,
+      homepage: 'README.md',
+      auto2top: true,
+      logo: '_media/icon_small.webp',
+      themeColor: '#44a8f0',
+      topMargin: 50,//调整top
+      autoHeader: true,//自动显示标题
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      //##################
+      //插件
+      //##################
+      // 右侧目录-########################
+      toc: {
+        tocMaxLevel: 6,
+        target: 'h1,h2, h3, h4, h5, h6'
+      },
+      // 搜索-########################
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto',
+        depth: 6,
+        placeholder: '搜索...'
+      },
+      // 分页导航-########################
+      pagination: {
+        previousText: '上一篇',
+        nextText: '下一篇',
+        crossChapter: true,
+        // crossChapterText: true,//用了不好看
+      },
+      //
+      //又名
+      alias: {
+        // 修复繁体版本的跳转问题
+        '/%2F=': '/guide/hello_lifeup'
+      },
+      // 标签
+      tabs: {
+        persist: true,      // default
+        sync: true,      // default
+        theme: 'classic', // default
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      },
+      //插件
+      plugins: [
+        function (hook) {
+          // 页脚
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span><p>作者：<a href=https://docsify.js.org/#/ target="_blank">NYH</a></p></span>',
+            '<span><p>贡献：<a href=https://docsify.js.org/#/ target="_blank">Docsify</a></p></span>',
+            '<span><p>链接：<a href=https://docsify.js.org/#/ target="_blank">https://docsify.js.org</a></p></span>',
+            '<span><p>声明：本博客所有文章……</p></span>',
+            '<span><p>注意：转载请注明来处-<a href=https://docsify.js.org/#/ target="_blank">NYH</a></p></span>',
+            '</footer>'
+          ].join('');
+          // 页脚
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+        },
+        // 编辑
+        EditOnGithubPlugin.create(
+          "https://www.yuque.com/nyh951117/gmv5fe/xtdcps/",
+          "https://www.yuque.com/nyh951117/gmv5fe/xtdcps/",
+          // "https://github.com/Ayagikei/LifeUp-Wiki/tree/master/docs/",
+          // "https://github.com/Ayagikei/LifeUp-Wiki/tree/master/docs/zh-cn/",
+          function (file) {
+            return '码云编辑'
+          }
+        ),
+        EditOnGithubPlugin.create(
+          "https://www.yuque.com/nyh951117/gmv5fe/xtdcps/",
+          "https://www.yuque.com/nyh951117/gmv5fe/xtdcps/",
+          // "https://github.com/Ayagikei/LifeUp-Wiki/tree/master/docs/",
+          // "https://github.com/Ayagikei/LifeUp-Wiki/tree/master/docs/zh-cn/",
+          function (file) {
+            return '本地编辑'
+          }
+        )
+      ]
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="./js/docsify.js"></script>
+  <!-- 右侧目录 -->
+  <script src="./js/docsify-plugin-toc.js"></script>
+  <script>
+    // if (typeof navigator.serviceWorker !== 'undefined') {
+    //   navigator.serviceWorker.register('sw.js')
+    // }
+    // var ua = navigator.userAgent;
+    //  url = window.location.host;
+    //  ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+    //   isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+    //   isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+    //   isMobile = isIphone || isAndroid;
+    // if (isMobile) {
+    //   setTimeout(function () {
+    //     var elements = document.getElementsByClassName("sidebar-toggle")
+    //   var menu = elements[0]
+    //   console.log("is null = " + menu)
+    //   // menu.setAttribute('class', 'sidebar-toggle-mobile')
+    //    }, 1000);
+    //   console.log("?????")
+    // }
+  </script>
+  <!-- 图片缩放 -->
+  <script src="./js/zoom-image.min.js"></script>
+  <!-- 搜索查找 -->
+  <script src="./js/search.min.js"></script>
+  <!-- 更换主题 -->
+  <script src="./js/docsify-themeable.min.js"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 分页导航 -->
+  <script src="./js/docsify-pagination.min.js"></script>
+  <!-- 标签 -->
+  <script src="./js/docsify-tabs.js"></script>
+  <!-- 回到顶部功能 -->
+  <script src="./js/vanilla-back-to-top.min.js"></script>
+  <script>
+    addBackToTop({
+      diameter: 45,
+      backgroundColor: '#44a8f0',
+      textColor: '#fff',
+    });
+  </script> -->
+
+</body>
+
+</html>
