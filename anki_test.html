@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NYH-HTML</title>
+</head>
+
+<body>
+
+    <h1>我的网页链接</h1>
+
+    <h2>内容简介：</h2>
+
+    <p>我的个人链接，方便网页调用</p>
+
+    <h2>Data</h2>
+
+    <VAR>Deck=nyh</VAR>
+
+    <!-- 页眉区块 -->
+    <div class="bar head">DECK : {{Deck}}</div>
+    <!-- 正面区块 -->
+    <div class="section">
+        <div id="origin" class="items">{{EXPRESSION}}&nbsp;&nbsp;<span
+                style="color:grey;font-weight:normal;">-></span><span id="expression" class="items">
+                {{EXPRESSION}}</span>{{AUDIO}}</div>
+        {{#PHONTIC SYMBOLS}}
+        <div id="phontic" class="items">/{{PHONTIC SYMBOLS}}/</div>
+        {{/PHONTIC SYMBOLS}}
+        <div id="sentence" class="items">{{SOURCE / EXAMPLE}}</div>
+        {{#IMAGE}}
+        <div class="items">{{IMAGE}}</div>
+        {{/IMAGE}}
+    </div>
+    <div class="bar foot">
+        {{#URL}}
+        <div id="url"><a href={{URL}}>source URL </div>
+        {{/URL}}
+    </div>
+
+    <script type="text/javascript">
+        var aa = document.querySelectorAll("#sentence>b");
+        var bb = document.querySelectorAll("#expression");
+        for (var i = 0; i < bb.length; i++) {
+            bb[i].innerHTML = aa[i].innerHTML;
+        }
+    </script>
+
+    <!-- **************************** -->
+
+    <!-- 页眉区块 -->
+    <div class="bar head">DECK : {{Deck}}</div>
+    <!-- 正面区块 -->
+    <div class="section">
+        <div id="origin" class="items">{{EXPRESSION}}&nbsp;&nbsp;<span
+                style="color:grey;font-weight:normal;">-></span><span id="expression"
+                class="items">{{EXPRESSION}}</span>{{AUDIO}}</div>
+        {{#PHONTIC SYMBOLS}}
+        <div id="phontic" class="items">/{{PHONTIC SYMBOLS}}/</div>
+        {{/PHONTIC SYMBOLS}}
+        <div id="sentence" class="items">{{SOURCE / EXAMPLE}}</div>
+        {{#IMAGE}}
+        <div class="items">{{IMAGE}}</div>
+        {{/IMAGE}}
+    </div>
+
+    <hr id=answer>
+
+    <div class="section">
+        <div id="paraphrase" class="items">{{MEANING}}</div>
+        {{#ANALYSIS / HINT}}
+        <div id="hint" class="items"> {{ANALYSIS / HINT}}</div>
+        {{/ANALYSIS / HINT}}
+        {{#SYNONYM}}
+        <div id="synonym" class="items" style="color:#C00000">syn. {{SYNONYM}}</div>
+        {{/SYNONYM}}
+        {{#ANTONYM}}
+        <div id="antonym" class="items">anto. {{ANTONYM}}</div>
+        {{/ANTONYM}}
+    </div>
+
+    <div class="bar foot">
+        {{#URL}}
+        <div id="url"><a href={{URL}}>source URL </div>
+        {{/URL}}
+    </div>
+
+    <script type="text/javascript">
+        var aa = document.querySelectorAll("#sentence>b");
+        var bb = document.querySelectorAll("#expression");
+        for (var i = 0; i < bb.length; i++) {
+            bb[i].innerHTML = aa[i].innerHTML;
+        }
+        var colorMap = {
+            'n.': '#86c440',
+            'a.': '#727272',
+            'adj.': '#727272',
+            'ad.': '#684b9d',
+            'adv.': '#684b9d',
+            'v.': '#479cdf',
+            'vi.': '	#0000C6',
+            'vt.': '#4A4AFF',
+            'prep.': '#04B7C9',
+            'conj.': '#04B7C9',
+            'pron.': '#04B7C9',
+            'art.': '#04B7C9',
+            'num.': '#04B7C9',
+            'int.': '#04B7C9',
+            'interj.': '#04B7C9',
+            'modal.': '#04B7C9',
+            'aux.': '#04B7C9',
+            'pl.': '#D111D3',
+            'abbr.': '#FEE0C6',
+            'syn.': '#FF3030',
+            'sing.': '#98F5FF',
+            'phr.': '#838B8B',
+            'phrv.': '#C1CDCD',
+            'c.': '#FF7256',
+            'u.': '	#FFD306',
+            'for.': '#000000',
+            'infor.': '#CAFF70',
+            'anto.': '#458B74',
+            'predic.': '#FF69B4',
+            'uk.': '#CC00FF',
+            'us.': '#CC0066',
+            'mass.': '#005757',
+            'slang.': '#F9F900',
+        };
+        [].forEach.call(document.querySelectorAll('#paraphrase,#synonym,#antonym'), function (div) {
+            div.innerHTML = div.innerHTML.replace(/\b[a-z]+\./g, function (symbol) {
+                if (colorMap[symbol]) {
+                    return '<a style="background-color:' + colorMap[symbol] + ';border-radius: 3px;color:white;padding:0 0px 0 2px;margin-right:2px;">' +
+                        symbol + '</a>';
+                } else {
+                    return symbol;
+                }
+            });
+        });
+    </script>
+
+    <!-- ****************** -->
+    </style>
+    <!-- Anki basic template Facebook-style -->
+    <!-- Based on https://github.com/ninja33/anki-templates,author:ninja33，inspired by: 炸毛喵 -->
+    <style>
+        /*global setting of card style*/
+        .card {
+            font-family: Segoe UI, helvetica, arial, sans-serif;
+            /*字体名称*/
+            text-align: left;
+            /*对齐方式*/
+            #color: #1d2129;
+            /*字体颜色*/
+            background-image: url(https://static.smartisanos.cn/account.common/img/v2/bg_9b9dcb65ff@2x.png);
+        }
+
+        /*页眉页脚全局样式*/
+        .bar {
+            box-shadow: 0 9px 30px -6px rgba(0, 0, 0, .2), 0 18px 20px -10px rgba(0, 0, 0, .2), 0 18px 20px -10px rgba(0, 0, 0, .2), 0 10px 20px -10px rgba(0, 0, 0, .99);
+            /*设定阴影*/
+            border: 1px solid #8E8E8E;
+            /*边缘 #dadada*/
+            border-radius: 7px;
+            /*圆角幅度*/
+            color: #fff;
+            /*字体颜色*/
+            padding: 5px;
+            /*四周留白*/
+            text-decoration: none;
+            /*文本修饰*/
+            font-size: 12px;
+            /*字体大小*/
+            font-weight: bold;
+            /*字体粗细*/
+        }
+
+        /*页眉样式*/
+        .head {
+            padding-left: 30px;
+            /*左侧留白，为图标预留空间*/
+            background: #365899 url(_clipboard.png) no-repeat left
+                /*记事本图标*/
+        }
+
+        /*页脚样式*/
+        .foot {
+            padding-right: 30px;
+            /*右侧留白，为图标预留空间*/
+            text-align: right;
+            /*文本右对齐*/
+            background: #365899 url(_cloud.png) no-repeat right
+                /*云端图标*/
+        }
+
+        /*区块全局样式*/
+        .section {
+            box-shadow: 0 9px 30px -6px rgba(0, 0, 0, .2), 0 18px 20px -10px rgba(0, 0, 0, .2), 0 18px 20px -10px rgba(0, 0, 0, .2), 0 10px 20px -10px rgba(0, 0, 0, .1);
+            /*依次设定阴影*/
+            border: 1px solid #dadada;
+            /*边界半径*/
+            border-radius: 10px;
+            /*圆角幅度*/
+            background: url(https://static.smartisanos.cn/account.common/img/dialog-gray-bg_42c40b3eb6.png) #fff bottom repeat-x;
+            background-size: 100% 20%;
+            position: relative;
+            /*定位-相对定位*/
+            margin: 25px 0;
+            /*间隔-上下*/
+        }
+
+        /*区块各项全局样式*/
+        .items {
+            font-size: 18px;
+            /*字体大小*/
+            margin: 0 15px;
+            /*区块间隔*/
+            padding: 10px 0 12px 0;
+            /*区块留白*/
+            line-height: 25px;
+            /*行高*/
+        }
+
+        /*音标区域样式*/
+        #phontic {
+            padding: 0 0 15px 0;
+            /*区块留白*/
+            color: #8A2BE2;
+            /*字体颜色*/
+        }
+
+        /*例句区域样式*/
+        #sentence {
+            padding: 12px 0 15px 0;
+            /*区块留白*/
+            border-top: 1px solid #e5e5e5;
+            /*上边界*/
+            color: #0000CD;
+            /*字体颜色*/
+        }
+
+        #sentence b {
+            border-radius: 5px;
+            /*加粗部分的边界半径*/
+            color: #fff;
+            /*加粗部分的字体颜色*/
+            background-color: #000;
+            /*加粗部分的背景颜色*/
+            padding-left: 4px;
+            /*加粗部分的区块左侧留白*/
+            padding-right: 4px;
+            /*加粗部分的区块右侧留白*/
+        }
+
+        #sentence i {
+            font-weight: bold;
+            /*斜体部分的字体粗细*/
+            border-radius: 5px;
+            /*斜体部分的边界半径*/
+            color: #fff;
+            /*斜体部分的字体颜色*/
+            background-color: #CC00CC;
+            /*斜体部分的背景颜色*/
+            padding-left: 4px;
+            /*斜体部分的区块左侧留白*/
+            padding-right: 4px;
+            /*斜体部分的区块右侧留白*/
+            text-decoration: none;
+            /*斜体部分的字体修饰*/
+        }
+
+        /*挖空区域样式*/
+        #missing {
+            padding: 12px 0 15px 0;
+            /*区块留白*/
+            border-top: 1px solid #e5e5e5;
+            /*上边界*/
+            color: #0000CD;
+            /*字体颜色*/
+        }
+
+        #missing b {
+            border-radius: 5px;
+            /*加粗部分的边界半径*/
+            color: transparent;
+            /*加粗部分的字体颜色*/
+            background-color: #000;
+            /*加粗部分的背景颜色*/
+            padding-left: 4px;
+            /*加粗部分的区块左侧留白*/
+            padding-right: 4px;
+            /*加粗部分的区块右侧留白*/
+        }
+
+        #missing i {
+            border-radius: 5px;
+            /*斜体部分的边界半径*/
+            color: #fff;
+            /*斜体部分的字体颜色*/
+            background-color: #CC00CC;
+            /*斜体部分的背景颜色*/
+            padding-left: 4px;
+            /*斜体部分的区块左侧留白*/
+            padding-right: 4px;
+            /*斜体部分的区块右侧留白*/
+            font-weight: bold;
+            /*斜体部分的字体粗细*/
+            text-decoration: none;
+            /*斜体部分的字体修饰*/
+        }
+
+        /*意思区域样式*/
+        #paraphrase {
+            font-weight: bold;
+            /*字体粗细*/
+            padding: 20px 0 15px 0;
+            /*区块留白*/
+        }
+
+        #paraphrase i {
+            color: #CC00CC;
+            /*斜体部分字体颜色*/
+        }
+
+        /*造句区域样式*/
+        #practiceCN {
+            font-family: Times New Roman;
+            /*字体*/
+            color: #01814A;
+            /*字体颜色*/
+            padding: 0 0 10px 0;
+            /*区块留白*/
+        }
+
+        #practiceEN {
+            font-family: Times New Roman;
+            /*字体*/
+            color: #2E8B57;
+            /*字体颜色*/
+            padding: 0 0 10px 0;
+            /*区块留白*/
+        }
+
+        /*分析和提示区域样式*/
+        #hint {
+            font-family: Comic Sans MS;
+            /*字体*/
+            font-style: italic;
+            /*斜体*/
+            color: #CD6600;
+            /*字体颜色*/
+            padding: 0 0 10px 0;
+            /*区块留白*/
+        }
+
+        /*网址区域样式*/
+        #url a {
+            text-decoration: none;
+            /*文本修饰-无，用于去掉网址格式中的下划线*/
+            font-weight: bold;
+            /*字体粗细*/
+            color: #fff;
+            /*字体颜色*/
+        }
+
+        /*单词字段样式*/
+        #expression {
+            font-size: 20px;
+            /*字体大小*/
+            font-weight: bold;
+            /*字体粗细*/
+            text-align: left;
+            /*文本对齐*/
+            color: #8B8378;
+            /*字体颜色/
+  padding    : 10px 0 0 0; /*区块留白*/
+        }
+
+        /*原型字段样式*/
+        #origin {
+            border-top: 0px;
+            /*顶部边线，防止和定期区块边线重叠*/
+            line-height: 1.2em;
+            /*段落行高*/
+            font-size: 25px;
+            /*字体大小*/
+            font-weight: bold;
+            /*字体粗细*/
+            color: #1d2129;
+            /*字体颜色*/
+            margin: 0 15px;
+            /*间隔/
+  padding     : 10px 0 0px 0; /*区块留白*/
+        }
+
+        /*近义词字段样式*/
+        #synonym {
+            border-top: 1px solid #e5e5e5;
+            /*上边界*/
+            font-weight: bold;
+            /*字体粗细*/
+            padding: 15px 0 15px 0;
+            /*区块留白*/
+        }
+
+        /*反义词字段样式*/
+        #antonym {
+            font-weight: bold;
+            /*字体粗细*/
+            padding: 15px 0 15px 0;
+            /*区块留白*/
+        }
+
+        </body></html>
