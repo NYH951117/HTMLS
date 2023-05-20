@@ -1,0 +1,30 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+	<ribbon startFromScratch="false">
+		<tabs>
+			<tab id="Tab1" label="NYH">
+				<group id="g1" label="关于">
+					<button id="b1" label="帮助" imageMso="HappyFace" size="large" onAction="Callback" />
+					<comboBox id="C1" label="Sheet Select1" onChange="FFF">
+                        <item id="item1" label="Sheet1" imageMso="_1" />
+                        <item id="item2" label="Sheet2" imageMso="_2" />
+                        <item id="item3" label="Sheet3" imageMso="_3" />
+                    </comboBox>
+                    <dropDown id="Dr1"  label="Sheet Select2" onAction="GGG">
+                        <item id="Dept1" label="Sheet1" />
+                        <item id="Dept2" label="Sheet2" />
+                        <item id="Dept3" label="Sheet3" />
+                    </dropDown>
+				</group>
+				<group id="g2" label="My group2">
+                </group>
+			</tab>
+			<tab id="Tab2" label="NYH2">
+				<group id="g2" label="关于">
+					<button id="b2" label="帮助" imageMso="HappyFace" size="large" onAction="Callback" />
+				</group>
+				<group id="g22" label="My group2s">
+                </group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>

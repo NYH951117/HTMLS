@@ -1,0 +1,53 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+	<ribbon startFromScratch="false">
+		<tabs>
+			<tab id="Tab1" label="NYH">
+				<group id="g1684560749" label="主页首页">
+					<button id="b1684560689" label="帮助版本" imageMso="HappyFace" size="large" onAction="AboutGui" />
+				</group>
+				<group id="g1684562807" label="工作簿操作">
+					<button id="b1684562825" label="表另存为簿" imageMso="AppointmentColorDialog" size="normal" onAction="AboutGui" />
+					<button id="b1684565353" label="合并工作簿" imageMso="AppointmentColorDialog" size="normal" onAction="AboutGui" />
+					<button id="b1684565355" label="拆分工作簿" imageMso="AppointmentColorDialog" size="normal" onAction="AboutGui" />
+				</group>
+				<group id="g1684562751" label="工作表操作">
+					<button id="b1684561473" label="创建目录" imageMso="MsnLogo" size="large" onAction="CreateCatalogue" />
+					<button id="b1684564285" label="批量建表" imageMso="MsnLogo" size="normal" onAction="AboutGui" />
+					<button id="b1684565627" label="重命名表" imageMso="MsnLogo" size="normal" onAction="AboutGui" />
+					<menu id="m1684566034" label="删除表格" imageMso="AutoSum" size="normal" itemSize="normal">
+						<button id="b1684567620" label="删除多余表格" imageMso="MsnLogo" size="normal" onAction="AboutGui" />
+						<button id="b1684567625" label="删除空白表格" imageMso="MsnLogo" size="normal" onAction="AboutGui" />
+					</menu>
+				</group>
+				<group id="g1684561023" label="单元格位置">
+					<button id="b1684561047" label="上移行" imageMso="MsnLogo" size="normal" onAction="RowUp" />
+					<button id="b1684561146" label="下移行" imageMso="MsnLogo" size="normal" onAction="RowDown" />
+					<button id="b1684561148" label="左移列" imageMso="MsnLogo" size="normal" onAction="ColLeft" />
+					<button id="b1684561150" label="右移列" imageMso="MsnLogo" size="normal" onAction="ColRight" />
+				</group>
+				<group id="g1684566300" label="单元格选择">
+					<button id="b1684566302" label="全选所有" imageMso="QueryAppend" size="normal" onAction="ColRight" />
+					<button id="b1684566304" label="向下全选" imageMso="QueryAppend" size="normal" onAction="ColRight" />
+					<button id="b1684566306" label="向上全选" imageMso="QueryAppend" size="normal" onAction="ColRight" />
+					<button id="b1684566308" label="向左全选" imageMso="QueryAppend" size="normal" onAction="ColRight" />
+					<button id="b1684566310" label="向右全选" imageMso="QueryAppend" size="normal" onAction="ColRight" />
+				</group>
+				<group id="g1684561543" label="单元格格式">
+					<menu id="m1684562506" label="数字格式" imageMso="AutoSum" size="normal" itemSize="normal">
+						<button id="b1684561560" label="中文大写" imageMso="MsnLogo" onAction="Num2ZhUpper" />
+						<button id="b1684561688" label="中文小写" imageMso="QueryAppend" onAction="Num2ZhUpper" />
+						<button id="b1684561745" label="数转字母" imageMso="AppointmentColorDialog" onAction="Y" />
+						<button id="b1684561747" label="字母转数" imageMso="QueryAppend" onAction="Y" />
+						<button id="b1684561749" label="数转字符" imageMso="AppointmentColorDialog" onAction="Y" />
+					</menu>
+				</group>
+				<group id="g1684565087" label="关于">
+					<button id="b1684565149" label="帮助教程" imageMso="HappyFace" size="normal" onAction="AboutGui" />
+					<button id="b1684565151" label=" VBA教程" imageMso="HappyFace" size="normal" onAction="AboutGui" />
+					<button id="b1684565153" label="关注我们" imageMso="HappyFace" size="normal" onAction="AboutGui" />
+					<button id="b1684565155" label="关于插件" imageMso="HappyFace" size="large" onAction="AboutGui" />
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
